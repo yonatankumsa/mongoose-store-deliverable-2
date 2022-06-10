@@ -4,19 +4,19 @@
     <fieldset>
       <legend>Edit</legend>
       <label>
-        NAME:<input type="text" name="name" placeholder= {{ product.name}}/>
+        NAME:<input type="text" name="name" value= {{ product.name}}/>
       </label>
       <label>
-        description:<input type="text" name="description" placeholder={{ product.description}} />
+        description:<input type="text" name="description" value={{ product.description}} />
       </label>
       <label>
-        img:<input type="text" name="img" placeholder="{{ product.img}}" />
+        img:<input type="text" name="img" value="{{ product.img}}" />
       </label>
       <label>
-        price:<input type="text" name="price" placeholder="{{ product.price}}" />
+        price:<input type="text" name="price" value="{{ product.price}}" />
       </label>
       <label>
-        qty:<input type="text" name="qty" placeholder="{{ product.qty}}" />
+        qty:<input type="text" name="qty" value="{{ product.qty}}" />
       </label>
     </fieldset>
     <input type="submit" value="Edit and Submit" />

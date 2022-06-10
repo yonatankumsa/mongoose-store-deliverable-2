@@ -1,0 +1,29 @@
+{% layout "layout.liquid" %} {% block content %}
+              
+<div>
+    <a href="/products">go back to main </a>
+<h2>{{ product.name }}</h2><br>
+<img src="{{product.img }}" alt=""><br>
+Description: {{product.description}}<br>
+Price: {{ product.price }}<br>
+
+
+{% if product.qty <= 0 %} OUT OF STOCK {% else %} Qty: {{product.qty}} remaining 
+
+{% comment %}method=PUT overwriteform method only post/get{% endcomment %}
+<form action="/products/{{ product._id }}?_method=PUT" method="POST">
+  <input type="submit" value="BUY" />
+  {% endif %}
+</form>   
+<form action="/products/{{product._id}}/edit" method="get">
+    <input type="submit" value="Edit" />
+</form>  
+
+</div>
+
+
+<form action="/products/{{ product._id }}?_method=DELETE" method="POST">
+    <input type="submit" value="Delete" />
+</form>  
+
+{% endblock %}
